@@ -207,7 +207,6 @@ html{
     background-color: rgba(128, 128, 128, 0.4);
     display: none;
     z-index: 4;
-    transition: all 0.5s ease-in-out;
 }
 .backdrop.back{
     display: block;
@@ -998,7 +997,7 @@ ul li a:hover{
     position: fixed;
     width: 30px;
     height: 60px;
-    background-color: #00fbff83;
+    background-color: #98fdffdc;
     bottom: 2vh;
     right: 1vw;
     scroll-behavior: smooth;
@@ -1011,8 +1010,7 @@ ul li a:hover{
     transition: 0.5s ease-in-out;
 }
 .gototop.top:hover{
-    background-color: aqua;
-    border: 2px solid rgb(0, 0, 70);
+    background-color: rgb(0, 221, 221);
 }
 
 
@@ -1133,11 +1131,32 @@ footer .container .row .col3 h3{
 }
 
 
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1075px) {
     .menu-btn, .menu-btn_burger{
         display: none;
     }
     .sidebar .bottom, .sidebar .bottom .phone1, .bottom .message1{
+        display: none;
+    }
+
+}
+@media only screen and (max-width: 1075px){
+    .nav{
+        height: 75px;
+    }
+    .nav .logo{    
+        height: 65px; 
+        width: 175px;
+        transition: 0.5s ease-in-out;
+    }
+    .nav.active{
+        height: 65px;
+    }
+    .nav.active .logo{
+        height: 55px;
+        width: 150px;
+    }
+    .navitems{
         display: none;
     }
 }
@@ -1163,24 +1182,6 @@ footer .container .row .col3 h3{
         border-radius: 5px;
     }
     
-    .nav{
-        height: 75px;
-    }
-    .nav .logo{    
-        height: 65px; 
-        width: 175px;
-        transition: 0.5s ease-in-out;
-    }
-    .nav.active{
-        height: 65px;
-    }
-    .nav.active .logo{
-        height: 55px;
-        width: 150px;
-    }
-    .navitems{
-        display: none;
-    }
     .sidebar{
         width: 60vw;
         left: -60vw;
@@ -1241,7 +1242,9 @@ footer .container .row .col3 h3{
         font-size: 20px;
     }
     .gototop.top{
-        background-color: aqua;
+        background-color: rgba(2, 252, 252, 0.74);
+        bottom: 20px;
+        right: 20px;
     }
 }
 /* md screen */
@@ -1275,7 +1278,10 @@ footer .container .row .col3 h3{
     .container_6 .col_2 .row1{
         grid-template: 0.15fr 0.15fr 0.15fr 0.15fr 0.15fr 0.15fr / 0.45fr 0.45fr;       
     }
-
+    .topcontainer_right .carousle .owl-carousel .item .img{
+        width: 60%;
+        border-radius: 0;
+    }
 }
 @media screen and (max-width: 1280px) and (min-width: 992px) {
     .container_6 .col_2 .row1 .box{
