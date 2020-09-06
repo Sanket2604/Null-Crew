@@ -8,7 +8,7 @@
     width: 7px;
 }
 ::-webkit-scrollbar-track{
-    border: 7px solid rgb(255, 255, 255);
+    border: 7px solid rgb(0, 0, 44);
     box-shadow: inset 0 0 2.5px 2px rgba(255, 255, 255, 0.521);
 }
 ::-webkit-scrollbar-thumb{
@@ -49,7 +49,7 @@ html{
     height: 85px;
     width: 100%;
     background-color: rgba(253, 251, 251, 0);
-    z-index: 5;
+    z-index: 4;
     transition: all 0.5s ease-in-out;
 }
 .nav .logo{    
@@ -171,6 +171,7 @@ html{
     background: rgb(0, 0, 70);
     border-radius: 5px;
     transition: all .5 ease-in-out;
+    cursor: pointer;
 }
 .menu-btn_burger::before,
 .menu-btn_burger::after {
@@ -205,6 +206,18 @@ html{
     transform: rotate(-45deg) translate(35px, 35px);
 }
 
+.backdrop{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(128, 128, 128, 0.4);
+    display: none;
+    z-index: 4;
+    transition: all 0.5s ease-in-out;
+}
+.backdrop.back{
+    display: block;
+}
 .sidebar{
     position: fixed;
     width: 20vw;
@@ -213,27 +226,78 @@ html{
     z-index: 5;
     color: white;
     font-size: 16px;
+    left: -20vw;
+    transition: 0.5s linear;
+    overflow-y: scroll;
 }
-.sidebar ul li{
-    padding: 1.5vh 1vw;
+.sidebar.slide{
+    left: 0vw;
+}
+.sidebar .list1 .list1ele{
+    padding: 1.5vh 2vw;
     width: 100%;
-}
-.sidebar ul li:first-child{
-    background-color: #0162C8;
-    transition: 0.5s ease-in-out;
     cursor: pointer;
 }
-.sidebar ul li:first-child:hover{
+.sidebar .list1 .ele1{
+    background-color: #0162C8;
+    transition: 0.5s ease-in-out;
+}
+.sidebar .list1 .ele1:hover{
     background: rgb(0, 0, 44);
 }
-.sidebar ul li:first-child i{
+.sidebar .list1 .ele1 i{
     float: right;
     font-size: 20px;
-    font-weight: 100;
+    color: grey;
 }
-
-
-
+.sidebar .list1 .ele2{
+    transition: all 0.5s linear;
+}
+.sidebar .list1 .ele2 i{
+    float: right;
+    font-size: 16px;
+    color: grey;
+}
+.dropdown, .dropdown1,
+.dropdown2, .dropdown3,
+.dropdown4, .dropdown5{
+    display: none;
+}
+.drpele{
+    padding: 1.5vh 3vw;
+    cursor: pointer;
+}
+.drpele i{
+    float: right;
+    font-size: 16px; 
+    color: grey;
+}
+.dropdown.drop, .dropdown1.drop, 
+.dropdown2.drop,.dropdown3.drop, 
+.dropdown4.drop,.dropdown5.drop{
+    display: block;
+}
+.drpele1{
+    padding: 1.5vh 4vw;
+}
+.sidebar .bottom{
+    position: fixed;
+    bottom: 0px;
+    height: 7vh;
+    width: 40vw;
+    display: grid;
+    grid-template: 7vh / 50% 50%;
+}
+.sidebar .bottom .phone1, .bottom .message1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: rgb(0, 0, 44);
+}
+.bottom .phone1:hover, .bottom .message1:hover{
+    background-color: #0162C8;
+}
 
 .contacttab{
     position: fixed;
@@ -243,7 +307,7 @@ html{
     width: 100%;
     z-index: 5;
     margin-top: 85px;
-    background-image: url(Images/contact.jpg);
+    background: rgb(0, 0, 44);
     padding-top: 5vh;
     transition: 1s ease-in-out;
 }
@@ -308,7 +372,7 @@ ul li a:hover{
     margin-top: 85px;
     padding-top: 5vh;
     padding-bottom: 5vh;
-    background-image: url(Images/contact.jpg);
+    background: rgb(0, 0, 44);
     transition: 0.5s ease-in-out;
 }
 
@@ -1049,10 +1113,38 @@ footer .container .row .col3 h3{
     .menu-btn, .menu-btn_burger{
         display: none;
     }
+    .sidebar .bottom, .sidebar .bottom .phone1, .bottom .message1{
+        display: none;
+    }
 }
 @media only screen and (max-width: 1000px) {
+        
+    ::-webkit-scrollbar{
+        width: 5px;
+    }
+    ::-webkit-scrollbar-track{
+        border: 5px solid rgb(0, 0, 44);
+    }
+    ::-webkit-scrollbar-thumb{
+        border-radius: 5px;
+    }
+    
+    ::-webkit-resizer{
+        width: 5px;
+    }
+    ::-webkit-resizer-track{
+        border: 5px solid #232943;
+    }
+    ::-webkit-resizer-thumb{
+        border-radius: 5px;
+    }
+    
     .navitems{
         display: none;
+    }
+    .sidebar{
+        width: 40vw;
+        left: -40vw;
     }
     .topcontainer_left .heading p, .topcontainer_left .content p, .topcontainer_left .button2{
         text-align: center;

@@ -21,22 +21,75 @@
             <div class="contact"><a href="#" class="cool-link">CONTACT</a></div>
             <div class="button"><a class="btn" href="#">Request A Quote</a></div>  
         </div>
-        <div class="menu-btn" style="transition: all .5s ease-in-out;">
+        <div class="menu-btn" style="transition: all .5s ease-in-out;" onclick="toggleSideBar()">
             <div class="menu-btn_burger" style="transition: all .5s ease-in-out;"></div>
         </div>
         <script src="mobilemenu.js"></script>
     </div>
+    <div class="backdrop"></div>
     <div class="sidebar">
-        <ul>
-            <li>Close<span><i class="fas fa-times"></i></span></li>
-            <li>Home</li>
-            <li>Company</li>
-            <li>Services</li>
-            <li>Pricing</li>
-            <li>Careers</li>
-            <li>Contact</li>
-            <li>Request a Quote</li>
+        <ul class="list1">
+            <li class="list1ele ele1" onclick="sideBarClose()">Close<i class="fas fa-times" style="color: white;"></i></li>
+            <li class="list1ele">Home</li>
+            <li class="list1ele ele2" onclick="showdropdown()">Company<span><i class="company1 fas fa-chevron-down"></i></span></li>
+                <ul class="dropdown">
+                    <li class="drpele">About Us</li>
+                    <li class="drpele">Our Team</li>
+                    <li class="drpele">Our Clients</li>
+                    <li class="drpele">Portfolio</li>
+                    <li class="drpele">Mission & Vision</li>
+                    <li class="drpele">Our Development Process</li>
+                    <li class="drpele">Client Reviews</li>
+                    <li class="drpele">Contact Us</li>
+                </ul>
+            <li class="list1ele ele2"  onclick="showdropdown1()">Services<span><i class="services fas fa-chevron-down"></i></span></li>
+                <ul class="dropdown1">
+                    <li class="drpele" onclick="showdropdown2()">Web Development<i class="webdevelop fas fa-chevron-down"></i></li>
+                        <ul class="dropdown2">
+                            <li class="drpele1"><a href="#">Web Development</a></li>
+                            <li class="drpele1" style="color: grey;">PHP Development</li>
+                            <li class="drpele1" style="color: grey;">Angular JS Development</li>
+                            <li class="drpele1" style="color: grey;">Node Development</li>
+                        </ul>
+                    <li class="drpele" onclick="showdropdown3()">Mobile App Development<i class="mobdev fas fa-chevron-down"></i></li>
+                        <ul class="dropdown3">
+                            <li class="drpele1"><a href="#">Mobile App Development</a></li>
+                            <li class="drpele1"><a href="#">Android App Development</a></li>
+                            <li class="drpele1"><a href="#">iPhone App Development</a></li>
+                            <li class="drpele1"><a href="#">Windows App Development</a></li>
+                            <li class="drpele1"><a href="#">Custom Application Development</a></li>
+                            <li class="drpele1"><a href="#">Wearable App Development</a></li>
+                        </ul>
+                    <li class="drpele" onclick="showdropdown4()">Digital Marketing<i class="digimar fas fa-chevron-down"></i></li>
+                        <ul class="dropdown4">
+                            <li class="drpele1"><a href="#">Search Engine Optimization</a></li>
+                            <li class="drpele1"><a href="#">Social Media Marketing</a></li>
+                            <li class="drpele1"><a href="#">Pay per Click</a></li>
+                            <li class="drpele1"><a href="#">Content Writing</a></li>
+                            <li class="drpele1"><a href="#">Email Marketing</a></li>
+                        </ul>
+                    <li class="drpele" onclick="showdropdown5()">Graphic Design<i class="grade fas fa-chevron-down"></i></li>
+                        <ul class="dropdown5">
+                            <li class="drpele1"><a href="#">Graphic Design Service</li>
+                            <li class="drpele1"><a href="#">Brochure Design</a></li>
+                            <li class="drpele1"><a href="#">Printing</a></li>
+                            <li class="drpele1"><a href="#">Logo Design</a></li>
+                            <li class="drpele1"><a href="#">Branding</a></li>
+                        </ul>
+                </ul>
+            <li class="list1ele">Pricing</li>
+            <li class="list1ele">Careers</li>
+            <li class="list1ele">Contact</li>
+            <li class="list1ele">Request a Quote</li>
         </ul>
+        <div class="bottom">
+            <div class="phone1">
+                <i class="fas fa-phone-alt fa-lg"></i>                
+            </div>
+            <div class="message1">
+                <i class="fas fa-envelope fa-lg"></i>
+            </div>
+        </div>
     </div>
     <div class="contain" style="position: relative;">
         <div class="contacttab">
@@ -370,7 +423,7 @@
                 <div class="col-12">
                     <div class="socialcontainer">
                         <div class="social-icons">
-                            <a class="gmail" href="#"> <i class="fas fa-envelope"></i></i></a>
+                            <a class="gmail" href="#"> <i class="fas fa-envelope"></i></a>
                             <a class="inst" href="#" target="_blank"> <i class="fab fa-instagram"></i></a> 
                             <a class="linked" href="#" target="_blank"> <i class="fab fa-linkedin-in"></i></a>
                             <a class="yt" href="#" target="_blank"> <i class="fab fa-youtube"></i></i></a>           
@@ -390,5 +443,6 @@
 <script src="navtabs.js"></script>
 <script src="navtabsvisible.js"></script>
 <script src="gototop.js"></script>
+<script src="slidebar.js"></script>
 </body>
 </html>
